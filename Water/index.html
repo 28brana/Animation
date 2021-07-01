@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #main{
+            width: 500px;
+            display: inline-block;
+            height: 500px;
+            position: relative;
+            font-size: 10rem;
+            font-weight:1000;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: wheat;
+        }
+        #main::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            /* border:2px solid red; */
+            z-index: -1;
+            clip-path: polygon(0 25%, 7% 30%, 10% 33%, 16% 39%, 24% 47%, 28% 49%, 34% 52%, 42% 52%, 54% 50%, 56% 49%, 67% 43%, 77% 40%, 83% 41%, 93% 45%, 100% 50%, 100% 100%, 0 100%);           
+            background:linear-gradient(rgb(133, 133, 173),blue);
+            animation: flow 2s;
+        }
+        @keyframes flow {
+            100%{
+                clip-path: polygon(0 25%, 7% 30%, 10% 33%, 16% 39%, 24% 47%, 28% 49%, 34% 52%, 42% 52%, 54% 50%, 56% 49%, 67% 43%, 77% 40%, 83% 41%, 93% 45%, 100% 50%, 100% 100%, 0 100%);           
+            }
+            50%{
+                clip-path: polygon(0 25%, 7% 30%, 10% 33%, 16% 39%, 24% 47%, 28% 49%, 34% 52%, 42% 52%, 54% 50%, 56% 49%, 67% 43%, 77% 40%, 83% 41%, 93% 45%, 100% 50%, 100% 100%, 0 100%);           
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- Water -->
+    </div>
+    
+</body>
+</html>

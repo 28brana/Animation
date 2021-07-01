@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bangers&family=Fredericka+the+Great&family=Indie+Flower&family=Kirang+Haerang&family=Poppins:ital,wght@1,600&family=Rye&display=swap');
+            </style>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #text{
+            font-size: 60px;
+            color: white;
+        }
+        p{
+            text-shadow: 0 0 51px  white;
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="text">
+        <div class="container">
+            <h2 class="loki">
+              <p class="letter">O</p>
+              <p class="letter">N</p>
+              <p class="letter">E</p>
+              <p class="letter">:</p>
+              <p class="letter">5</p>
+              <p class="letter">1</p>
+              <p class="letter">P</p>
+              <p class="letter">M</p>
+            </h2>
+          </div>  
+        </div>
+    <script>
+
+const fonts = [
+  'Kirang Haerang',
+  'Indie Flower',
+  'Rye',
+   'Amatic SC',
+  'Bangers',
+  'Fredericka the Great'
+];
+
+const letters = document.querySelectorAll('.letter');
+
+let count=0;
+
+const rollIntro = () => {
+  letters.forEach(letter => {
+    
+  let randomFontIndex = Math.floor(Math.random() * fonts.length);
+    let randomFont = fonts[randomFontIndex];
+  
+ letter.style.fontFamily=randomFont;
+});
+}
+
+let introAnimation = setInterval(function() {
+  rollIntro();
+  if(count>15)
+    clearInterval(introAnimation);
+  count++;
+},350);
+
+
+        
+    </script>
+    
+</body>
+</html>
